@@ -311,7 +311,7 @@ h4 {
 .sideview-card h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #ff1f1f;
   margin-bottom: 1rem;
 }
 
@@ -323,13 +323,13 @@ h4 {
 }
 
 .sideview-card li {
-  color: #4b5563;
+  color: lab(54.85% 76.3 55.65);
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .sideview-card li:hover {
-  color: #4b3cbf;
+  color: #eb0000;
 }
 
 .sideview-image {

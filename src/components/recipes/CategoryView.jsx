@@ -44,14 +44,7 @@ const CategoryView = () => {
       <header className="category-header">
         <div className="overlay">
           <h1>{category ? category.name : "Category"}</h1>
-          <div className="search-box">
-            <input
-              type="text"
-              placeholder="Search recipes..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
+        
         </div>
       </header>
 
@@ -90,7 +83,7 @@ const CategoryView = () => {
         </div>
 
         {/* Sidebar */}
-        <aside className="sidebar">
+        <aside className="sideview">
           <section className="latest-recipes">
             <h2>Latest Recipes</h2>
             {latestRecipes.map((r) => (
@@ -104,7 +97,7 @@ const CategoryView = () => {
             ))}
           </section>
 
-          <section className="categories-list">
+          <section className="sideview-card ">
             <h2>Categories</h2>
             <ul>
               {categories.map((c) => (
