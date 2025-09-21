@@ -1,0 +1,158 @@
+/* Social Media Buttons - Fixed Right Side for All Pages */
+.social-buttons-container {
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+  padding: 5px 0;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.social-btn:active {
+  transform: scale(0.95);
+}
+
+/* Platform-specific colors */
+.social-btn.facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+}
+
+.social-btn.facebook:hover {
+  background: linear-gradient(135deg, #166fe5 0%, #1976d2 100%);
+}
+
+.social-btn.whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+.social-btn.whatsapp:hover {
+  background: linear-gradient(135deg, #20b954 0%, #075e54 100%);
+}
+
+.social-btn.messenger {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+}
+
+.social-btn.messenger:hover {
+  background: linear-gradient(135deg, #0099cc 0%, #0056cc 100%);
+}
+
+/* Pulse animation for attention */
+.social-buttons-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(75, 60, 191, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .social-buttons-container {
+    right: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-buttons-container {
+    right: 4px;
+    gap: 6px;
+  }
+  
+  .social-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-container {
+    right: 2px;
+    gap: 4px;
+  }
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-btn:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Hide pulse animation on very small screens to reduce distraction */
+@media (max-width: 480px) {
+  .social-buttons-container::before {
+    display: none;
+  }
+}
+
+/* Ensure buttons don't interfere with scrollbar */
+@media (min-width: 1200px) {
+  .social-buttons-container {
+    right: 12px;
+  }
+}

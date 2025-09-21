@@ -13,7 +13,7 @@ import RecipesMainView from './components/recipes/RecipesMainView';
 import Brands from './components/Brand';
 import AboutUs from './components/AboutUs';
 import CategoryView from "./components/recipes/CategoryView"; 
-
+import SocialButtons from './components/SocialButtons';
 
 
 // Protected Route component
@@ -47,6 +47,7 @@ function AppContent() {
   return (
     <div className="App">
       <Navbar />
+        <SocialButtons />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

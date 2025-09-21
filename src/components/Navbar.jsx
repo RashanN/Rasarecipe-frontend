@@ -40,7 +40,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <div className="logo-container">
             <img 
-              src="/uploads/web/logo.png" 
+              src="/uploads/web/logo-90.png" 
               alt="Rasa Recipe" 
               className="logo-image"
               onError={(e) => {
