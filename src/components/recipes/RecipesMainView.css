@@ -1,0 +1,146 @@
+.recipes-main-container {
+  font-family: "Poppins", sans-serif;
+  background: url("/images/recipes-2148214536-bg.jpg") center/cover no-repeat;
+  padding-bottom: 50px;
+}
+
+/* HEADER */
+.recipes-header {
+  
+  padding: 80px 20px;
+  text-align: center;
+  color: #000000;
+}
+.recipes-header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: oklch(100% 0.00011 271.152)
+}
+
+/* SEARCH */
+.recipes-search-bar {
+  margin: 20px auto;
+  max-width: 900px;
+  text-align: center;
+}
+.recipes-search-bar form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.recipes-search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+.search-btn,
+.advanced-btn {
+  padding: 10px 15px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.advanced-btn {
+  background: #f4a261;
+}
+
+/* MAIN CONTENT */
+.recipes-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* RECIPE GRID */
+.recipes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.recipe-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.recipe-info {
+  padding: 10px;
+}
+.recipe-info h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.recipe-info p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* PAGINATION */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pagination button.active {
+  background: #e63946;
+  color: #fff;
+}
+
+/* SIDEBAR */
+.recipes-sidebar {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+.sidebar-section {
+  margin-bottom: 20px;
+}
+.sidebar-section h3 {
+  margin-bottom: 10px;
+}
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-section li {
+  margin-bottom: 8px;
+}
+.sidebar-section a {
+  text-decoration: none;
+  color: #333;
+}
+.sidebar-section a:hover {
+  color: #e63946;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .recipes-content {
+    grid-template-columns: 1fr;
+  }
+  .recipes-sidebar {
+    margin-top: 20px;
+  }
+}

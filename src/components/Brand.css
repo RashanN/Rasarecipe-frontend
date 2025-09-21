@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+  min-height: 100vh;
+  background-color: #f7f7f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.header-section {
+  position: relative;
+  background-image: url('/uploads/web/2148214536.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.header-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.image-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  flex: 0 0 calc(20% - 1.2rem); /* Approximately 5 images per row with gap */
+  margin-bottom: 3.5rem;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+.brand-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 0.875rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.7; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .image-card {
+    flex: 0 0 calc(50% - 0.75rem); /* 2 images per row on mobile */
+  }
+
+  .brand-image {
+    height: 150px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .image-card {
+    flex: 0 0 calc(33.33% - 1rem); /* 3 images per row on tablet */
+  }
+
+  .brand-image {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .image-card {
+    flex: 0 0 calc(20% - 1.2rem); /* 5 images per row on desktop */
+  }
+}

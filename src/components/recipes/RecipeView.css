@@ -1,0 +1,259 @@
+.recipe-view {
+  min-height: 100vh;
+}
+
+.recipe-header {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-overlay {
+  background: linear-gradient(transparent, rgba(253, 250, 250, 0.7));
+  width: 100%;
+  padding: 2rem;
+  color: white;
+}
+
+.header-overlay h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.recipe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.recipe-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meta-label {
+  font-weight: bold;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.categories-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-tag {
+  background: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.recipe-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.recipe-image-section {
+  position: relative;
+  text-align: center; 
+  
+}
+
+.recipe-main-image {
+  display: block;     
+  margin: 0 auto;  
+    
+  max-width: 500px;      
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+/*  margin-left: 50%;*/
+}
+
+
+.cooking-time {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(202, 0, 0, 0.9);
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+    
+}
+
+.ingredients-section h2,
+.directions-section h2,
+.comments-section h2 {
+  color: #333;
+  border-bottom: 2px solid #ff1414;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ingredient-qty {
+  font-weight: bold;
+  min-width: 80px;
+}
+
+.recipe-content-text {
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.author-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.comment-form {
+  margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.comment-form button {
+  background: #ff1414;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.comment-form button:hover {
+  background: #cf0f0f;
+}
+
+.login-to-comment {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comment {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.comment-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-content p {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.no-comments {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #ff1414;
+}
+
+@media (min-width: 768px) {
+  .recipe-content {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .ingredients-section {
+    grid-column: 1;
+  }
+  
+  .directions-section,
+  .author-section,
+  .comments-section {
+    grid-column: 2;
+  }
+}
